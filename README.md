@@ -23,13 +23,13 @@ Install docker - https://docs.docker.com/install/
 
 Install docker-composer - https://docs.docker.com/compose/install/
 
-**important**: if you use ubuntu 18 you should see the note at the end of this text
+**Important**: if you use ubuntu 18 you should see the note at the end of this text
 <br><br><br>
 ## Quick Start
 
 **IMPORTANT**: If you are using PyDDNS v1 before updating, make a backup of the file docker-compose.yml
 
-- Clone de proyect
+- Clone the project ```git clone https://github.com/AaronJFoster/PyDDNS.git```
 - ```cd PyDDNS```
 - copy the configuration file ```cp .env-demo .env```
 - Edit the configuration file ```nano .env```
