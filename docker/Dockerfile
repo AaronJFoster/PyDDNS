@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install \
     libkf5ldap-dev \
     xfonts-base \
     xfonts-75dpi \
-    -y --force-yes
+    -y --allow-downgrades
 
 
 WORKDIR /usr/src/app
