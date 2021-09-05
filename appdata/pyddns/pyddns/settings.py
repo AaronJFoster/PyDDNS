@@ -146,7 +146,7 @@ AUTHENTICATION_BACKENDS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'es-Es'
+LANGUAGE_CODE = 'en-En'
 
 TIME_ZONE = 'UTC'
 
