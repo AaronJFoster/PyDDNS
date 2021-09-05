@@ -1,7 +1,7 @@
 # ![PyDDNS](https://i.imgur.com/kOrgTBW.png)
 Complete system to create your own dynamic DNS server.
 
-Based on the <b>dprandzioch</b> project: https://github.com/dprandzioch/docker-ddns & <b>olimpo88</b> https://github.com/olimpo88/PyDDNS
+Based on the <b>dprandzioch</b> project: https://github.com/dprandzioch/docker-ddns & <b>olimpo88</b> project: https://github.com/olimpo88/PyDDNS
 
 
 ## Description
