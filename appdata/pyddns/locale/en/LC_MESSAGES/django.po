@@ -211,7 +211,7 @@ msgstr ""
 
 #: pyddns/templates/dash.html:164 pyddns/templates/subdomains.html:98
 #: pyddns/templates/users.html:117
-msgid "The updatewas successful and the hostname is now updated"
+msgid "The update was successful and the hostname is now updated"
 msgstr ""
 
 #: pyddns/templates/dash.html:165 pyddns/templates/subdomains.html:99
