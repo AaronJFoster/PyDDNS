@@ -161,7 +161,7 @@
 			var m_data = new FormData();
 			m_data.append( 'id_user', id_user);
             m_data.append( 'csrfmiddlewaretoken', getCookie('csrftoken'));
-            var r = confirm('{% trans "You certainly want to delete the user" %} '+username);
+            var r = confirm('{% trans "Do you want to delete the user" %} '+username);
 			if (r == true) {
 				$.ajax({url:"{% url 'del_user' %}",
 				type: "POST",
