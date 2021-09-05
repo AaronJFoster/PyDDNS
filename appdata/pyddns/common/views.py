@@ -28,7 +28,7 @@ def dologin(request):
 	if request.session.test_cookie_worked():
 		cant_fails=Activity_log.objects.filter(action='DOLOGIN', xforward=getForwardedFor(request), date__gt=(datetime.now()-timedelta(minutes=10)), result__startswith='False').count()
 		if cant_fails>=5:
-			myjson['errors']['reason']=u'Ha superado la cantidad máxima de intentos.'
+			myjson['errors']['reason']=u'You have exceeded the maximum number of attempts.'
 		else:
 			user = authenticate(username=username,
 					password=request.POST['password'])
@@ -37,15 +37,15 @@ def dologin(request):
 					request.session.delete_test_cookie()
 					djlogin(request, user)
 					myjson['success'] = True
-					myjson['message'] = 'Bienvenido, %s!' % (user.get_full_name(),)
+					myjson['message'] = 'Welcome, %s!' % (user.get_full_name(),)
 					myjson['redirect'] = '/common/main/'
-					myjson['errors']['reason'] = 'Login correcto.'
+					myjson['errors']['reason'] = 'Login successful.'
 				else:
-					myjson['errors']['reason'] = 'Cuenta deshabilitada.'
+					myjson['errors']['reason'] = 'Account disabled.'
 			else:
-				myjson['errors']['reason'] = 'Usuario y/o clave invalida.'
+				myjson['errors']['reason'] = 'Invalid username and / or password.'
 	else:
-		myjson['errors']['reason'] = 'Por favor, habilite las Cookies en su navegador.'
+		myjson['errors']['reason'] = 'Please enable cookies in your browser.'
 	Activity_log(action='DOLOGIN', xforward=getForwardedFor(request), user_affected=username, result="%s - %s"%(myjson['success'], myjson['errors']['reason'])).save()
 
 	return HttpResponse(json.dumps(myjson))
