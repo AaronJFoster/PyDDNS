@@ -299,5 +299,5 @@ msgid "Actions"
 msgstr ""
 
 #: pyddns/templates/users.html:162
-msgid "You certainly want to delete the user"
+msgid "Do you want to delete the user"
 msgstr ""
