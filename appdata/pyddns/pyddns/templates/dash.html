@@ -160,8 +160,8 @@
 	</div>
 
 	<!--
-	Posibles menssajes:
-	{% trans "The updatewas successful and the hostname is now updated" %}
+	Possible messages:
+	{% trans "The update was successful and the hostname is now updated" %}
 	{% trans "The APP not sinc bind" %}
 	{% trans "The hostname specified does not exist in this user account" %}
 	{% trans "The username and password pair do not match a real user" %}
@@ -186,7 +186,7 @@
 			success:function(result){
 				console.log(result)
 		  		if(result['success']){
-	            	//alert("Contrato agregado correctamente");
+	            	//alert("Domain added successfully");
 	            	location.reload(true);
 	            }
 	            else{
@@ -229,7 +229,7 @@
 				dataType:'json',
 				success:function(result){
 			  		if(result['success']){
-		            	//alert("Contrato agregado correctamente");
+		            	//alert("Subdomain added successfully");
 		            	location.reload(true);
 		            }
 		            else{
@@ -248,7 +248,7 @@
 			var m_data = new FormData();
 			m_data.append( 'id_domain', id_domain);
 	        m_data.append( 'csrfmiddlewaretoken', getCookie('csrftoken'));
-	        var r = confirm('{% trans "You certainly want to delete the domain " %}'+domain);
+	        var r = confirm('{% trans "Do you want to delete the domain " %}'+domain);
 			if (r == true) {
 				$.ajax({url:"{% url 'delete_domain' %}",
 					type: "POST",
@@ -258,7 +258,7 @@
 					dataType:'json',
 					success:function(result){
 				  		if(result['success']){
-			            	//alert("producto borrada correctamente");
+			            	//alert("Domain deleted successfully");
 			            	location.reload(true);
 			            }
 			            else{
