@@ -383,14 +383,14 @@ def set_ip(request,domain,ip):
         #print r.json()['Success']
         if r.json()['Success']:
             return_code = "good"
-            message = "The IP updated successfully"
+            message = "IP updated successfully"
         else:
             return_code = "dnserr"
             message = "The APP not sinc bind"
         #print return_code
         return return_code, message
     else:
-        return "nochg", "The IP already existed"
+        return "nochg", "IP did not change"
 
 
 
